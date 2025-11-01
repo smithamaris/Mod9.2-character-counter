@@ -18,14 +18,15 @@ function TextInput({onTextChange, placeholder = 'Start typing your content here.
     }, [text, onTextChange]);
     
     return (
-        <div>
-            <input
-        value={text}
-        onChange={e => setText(e.target.value)}
-        placeholder={placeholder}
-        />
-        </div>
-        
+        <div className="w-full">
+            <textarea
+                className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder={placeholder}
+                value={text}
+                onChange={e => setText(e.target.value)}
+                rows={6}
+            />
+        </div>        
     );
 }
 
